@@ -40,14 +40,15 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Pathogen
+call pathogen#helptags()
 execute pathogen#infect()
 
 " Powerline
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
-set laststatus=2
-set t_Co=256
+"python from powerline.vim import setup as powerline_setup
+"python powerline_setup()
+"python del powerline_setup
+"set laststatus=2
+"set t_Co=256
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
@@ -75,7 +76,7 @@ nmap <leader>w :w!<cr>
 command W w !sudo tee % > /dev/null
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""                 
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Set 7 lines to the cursor - when moving vertically using j/k
@@ -162,7 +163,7 @@ syntax enable
 set number
 
 set background=dark
-colorscheme peachpuff
+colorscheme brogrammer
 
 " Indent guides
 let g:indent_guides_enable_on_vim_startup = 1
@@ -171,10 +172,12 @@ let g:indent_guides_space_guides = 1
 let g:indent_guides_auto_colors = 0
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven  ctermbg=238
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd   ctermbg=237
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven  guibg='#252525'
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd   guibg='#303030'
 
 "80 char ruler
-let &colorcolumn=join(range(81,999),",")
-highlight ColorColumn ctermbg=237
+"let &colorcolumn=join(range(81,999),",")
+"highlight ColorColumn ctermbg=237
 
 " Set extra options when running in GUI mode
 if has("gui_running")
