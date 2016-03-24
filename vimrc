@@ -476,6 +476,9 @@ endfunction
 set wildmode=longest,list,full
 set wildmenu
 
+" Plugins work with specific file types
+filetype plugin on
+
 " ----------------------------------
 "  --------- plugins etc. ---------
 " ----------------------------------

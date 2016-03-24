@@ -16,3 +16,9 @@
 [submodule "vim-fugitive"]
 	path = vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
+[submodule "nerdcommenter"]
+	path = nerdcommenter
+	url = https://github.com/scrooloose/nerdcommenter.git
+[submodule "ack.vim"]
+	path = ack.vim
+	url = https://github.com/mileszs/ack.vim.git
