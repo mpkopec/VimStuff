@@ -1,9 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/home/kopec/.vim/syntax'
-let g:netrw_dirhist_2='/home/kopec/remote/koi1/agh/projects/salt/digital/design/vrf/dsp/behav'
-let g:netrw_dirhist_3='/home/kopec/remote/koi1/agh/projects/salt/digital/design/vrf/dsp/components'
-let g:netrw_dirhist_4='/home/kopec/remote/koi1/agh/projects/salt/digital/design/vrf/dsp/data_packet'
-let g:netrw_dirhist_5='/home/kopec/remote/koi1/agh/projects/salt/digital/design/vrf/dsp'
-let g:netrw_dirhist_6='/home/kopec/remote/koi1/agh/projects/salt/digital/design/vrf/dsp/data_packet'
-let g:netrw_dirhist_7='/home/mkopec/remote/koi1/agh/projects/salt/digital/design/vrf/dsp/behav'
+let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_1='/home/mkopec/.vim/syntax'

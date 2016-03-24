@@ -43,13 +43,6 @@
 call pathogen#helptags()
 execute pathogen#infect()
 
-" Powerline
-"python from powerline.vim import setup as powerline_setup
-"python powerline_setup()
-"python del powerline_setup
-"set laststatus=2
-"set t_Co=256
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -163,7 +156,8 @@ syntax enable
 set number
 
 set background=dark
-colorscheme brogrammer
+colorscheme badwolf
+"colorscheme monokai
 
 " Indent guides
 let g:indent_guides_enable_on_vim_startup = 1
@@ -481,3 +475,55 @@ endfunction
 " Normal tab autocomplete
 set wildmode=longest,list,full
 set wildmenu
+
+" ----------------------------------
+"  --------- plugins etc. ---------
+" ----------------------------------
+
+" Plugins
+" CtrlP
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+" NERDTree
+let g:nerdtree_tabs_open_on_console_startup=1
+
+" Airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline_right_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_left_alt_sep= ''
+let g:airline_left_sep = ''
+
+" EasyMotion
+" <Leader>f{char} to move to {char}
+map  <Leader>f <Plug>(easymotion-bd-f)
+nmap <Leader>f <Plug>(easymotion-overwin-f)
+
+" s{char}{char} to move to {char}{char}
+nmap s <Plug>(easymotion-overwin-f2)
+
+" Move to line
+map <Leader>L <Plug>(easymotion-bd-jk)
+nmap <Leader>L <Plug>(easymotion-overwin-line)
+
+" Move to word
+map  <Leader>w <Plug>(easymotion-bd-w)
+nmap <Leader>w <Plug>(easymotion-overwin-w)
+
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" Powerline
+"python from powerline.vim import setup as powerline_setup
+"python powerline_setup()
+"python del powerline_setup
+"set laststatus=2
+"set t_Co=256
