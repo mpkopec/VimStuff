@@ -488,6 +488,7 @@ filetype plugin on
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 " NERDTree
 let g:nerdtree_tabs_open_on_console_startup=1
+autocmd vimenter * NERDTree
 
 " Airline
 let g:airline#extensions#tabline#enabled = 1
