@@ -152,8 +152,9 @@ set guifont=Droid\ Sans\ Mono\ Slashed\ for\ Powerline\ 11
 " Enable syntax highlighting
 syntax enable 
 
-" Line numbers on
+" Line numbers on, relative, but on the current line normal
 set number
+set relativenumber
 
 set background=dark
 colorscheme badwolf
