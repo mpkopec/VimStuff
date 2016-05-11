@@ -147,7 +147,7 @@ set foldcolumn=1
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Default font for GVim
-set guifont=Droid\ Sans\ Mono\ for\ Powerline\ 12
+set guifont=Droid\ Sans\ Mono\ Slashed\ for\ Powerline\ 11
 
 " Enable syntax highlighting
 syntax enable 
