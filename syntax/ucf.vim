@@ -9,7 +9,7 @@ syn clear
 " syn case match
 
 syn keyword	ucfTodo		contained TODO TBD
-syn match	ucfComment	"#.*$" contains=ucfTodo
+syn match	ucfComment	"#.*" contains=ucfTodo
 syn match	ucfComment	"^\s*\zs#.*$"	contains=ucfTodo
 syn match	ucfComment	"\s\zs#.*$"	contains=ucfTodo
 "syn match	confComment	"\s#.*"ms=s+1 contains=ucfTodo

@@ -37,3 +37,6 @@
 [submodule "kde-konsole-colorschemes"]
 	path = kde-konsole-colorschemes
 	url = https://github.com/nareshv/kde-konsole-colorschemes.git
+[submodule "bundle/setcolors"]
+	path = bundle/setcolors
+	url = https://github.com/felixhummel/setcolors.vim.git
