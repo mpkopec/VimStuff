@@ -1,0 +1,38 @@
+# Universal Verilog/SystemVerilog snippets
+snippet /* "multiline comment"
+/*$1*/
+endsnippet
+
+# Verilog snippets
+
+
+# SystemVerilog snippets
+snippet b "bit type var" b
+bit $1;
+endsnippet
+
+snippet bv "bit type vector" b
+bit [$1:$2] $3;
+endsnippet
+
+snippet ba "bit type array" b
+bit [$1:$2] $5[$3:$4];
+endsnippet
+
+snippet br "bit reserved" b
+bit reserved;
+endsnippet
+
+snippet brc "bit reserved with comment" b
+bit /*${1:n}*/ reserved;
+endsnippet
+
+snippet bvr "bit vector reserved" b
+bit [$1:$2] reserved;
+endsnippet
+
+snippet typsp "typedef struct packed"
+typedef struct packed {
+	${2:fields}
+} ${1:struct_name_t};
+endsnippet

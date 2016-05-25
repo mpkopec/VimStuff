@@ -489,9 +489,10 @@ filetype plugin on
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 " NERDTree
-autocmd vimenter * NERDTree
-autocmd vimenter * wincmd l
-autocmd BufNew * wincmd l
+"autocmd vimenter * NERDTree
+"autocmd vimenter * wincmd l
+"autocmd BufNew * wincmd l
+let g:nerdtree_tabs_open_on_console_startup = 1
 
 autocmd WinEnter * call s:CloseIfOnlyNerdTreeLeft()
 
@@ -541,6 +542,15 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+" UltiSnips
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
 
 " Powerline
 "python from powerline.vim import setup as powerline_setup
