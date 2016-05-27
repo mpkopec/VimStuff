@@ -1,6 +1,128 @@
+snippet io "I/O declaration" b
+${1:name}           : ${2:dir}    ${3:type};
+endsnippet
+
+snippet ion "I/O declaration, no semicolon" b
+${1:name}           : ${2:dir}    ${3:type}
+endsnippet
+
+snippet iov "I/O declaration for vector" b
+${1:name}           : ${2:dir}    ${3:type}_VECTOR (${4:n} downto 0);
+endsnippet
+
+snippet iovn "I/O declaration for vector, no semicolon" b
+${1:name}           : ${2:dir}    ${3:type}_VECTOR (${4:n} downto 0)
+endsnippet
+
+snippet sig "signal declaration" b
+signal ${1:name}          : ${2:type} := '${3:value}';
+endsnippet
+
+snippet sigv "I/O declaration for vector" b
+signal ${1:name}          : ${2:type}_VECTOR (${3:n} downto 0);
+endsnippet
+
+snippet mp "map port" b
+${1:entity_io}       => ${2:outside_signal},
+endsnippet
+
+# TODO remove sapaces from the repeated name
+snippet mps "map port, same signal name" b
+${1:entity_io}       => $1,
+endsnippet
+
+# TODO remove sapaces from the repeated name
+snippet mpsn "map port, same signal name, no semicolon" b
+${1:entity_io}       => $1
+endsnippet
+
+snippet mpn "map port, no semicolon" b
+${1:entity_io}       => ${2:outside_signal}
+endsnippet
+
+snippet w "wait;"
+wait;
+endsnippet
+
+snippet wf "wait for n_time"
+wait for ${1:n_time};
+endsnippet
+
+snippet ent "entity statement" b
+entity ${1:name} is
+	port (
+		${2:port declaration}
+	);
+end $1;
+endsnippet
+
+snippet entg "entity statement with generic part" b
+entity ${1:name} is
+	generic (
+		${2:generic declaration}
+	);
+	port (
+		${3:port declaration}
+	);
+end $1;
+endsnippet
+
+snippet arch "architecture declaration" b
+architecture ${1:name} of ${2:component} is
+	-- Architecture's declarative part
+	${3:declarations}
+begin
+	-- Architecture body
+	${4:body}
+end $1;
+endsnippet
+
+snippet comp "component declaration" b
+component ${1:name} 
+	port (
+		${2:port declaration}
+	);
+end component;
+endsnippet
+
+snippet compg "component declaration with generic part" b
+component ${1:name} 
+	generic (
+		${2:generic declaration}
+	);
+	port (
+		${3:port declaration}
+	);
+end component;
+endsnippet
+
+snippet inst "instantiation" b
+${1:inst_name}: ${2:entity_name}
+port map (
+	${3:port_map}
+);
+endsnippet
+
+snippet instg "instantiation with generics" b
+${1:inst_name}: ${2:entity_name}
+generic map (
+	${3:generic_map}
+);
+port map (
+	${4:port_map}
+);
+endsnippet
+
 snippet proc "process statement" b
 ${1:name}: process (${2:signals})
 begin
 	${3:body}
+end process;
+endsnippet
+
+snippet procn "process statement, no sensitivity list" b
+${1:name}: process
+begin
+	${2:process_body}
 end process;
 endsnippet
