@@ -15,11 +15,23 @@ ${1:name}           : ${2:dir}    ${3:type}_VECTOR (${4:n} downto 0)
 endsnippet
 
 snippet sig "signal declaration" b
-signal ${1:name}          : ${2:type} := '${3:value}';
+signal ${1:name}          : ${2:type};
 endsnippet
 
-snippet sigv "I/O declaration for vector" b
+snippet sigv "signal declaration for vector" b
 signal ${1:name}          : ${2:type}_VECTOR (${3:n} downto 0);
+endsnippet
+
+snippet sigval "signal declaration with value" b
+signal ${1:name}          : ${2:type} := ${3:value};
+endsnippet
+
+snippet sigvval "signal declaration for vector with value" b
+signal ${1:name}          : ${2:type}_VECTOR (${3:n} downto 0) := ${4:value};
+endsnippet
+
+snippet gen "generic declaration" b
+${1:name}           : ${2:type} := '${3:value}';
 endsnippet
 
 snippet mp "map port" b
