@@ -1,3 +1,7 @@
+# ============================
+# I/O, signals, variables and
+# other one-liners.
+# ============================
 snippet io "I/O declaration" b
 ${1:name}           : ${2:dir}    ${3:type};
 endsnippet
@@ -60,6 +64,11 @@ snippet wf "wait for n_time"
 wait for ${1:n_time};
 endsnippet
 
+# ============================
+# Entities, architectures,
+# components, instantiation,
+# processes
+# ============================
 snippet ent "entity statement" b
 entity ${1:name} is
 	port (
@@ -137,4 +146,39 @@ ${1:name}: process
 begin
 	${2:process_body}
 end process;
+endsnippet
+
+# ============================
+# Flow control structures
+# ============================
+snippet if "if statement" b
+if ${1:condition} then
+	${2:if_body}
+end if;
+endsnippet
+
+snippet ife "if-else statement" b
+if ${1:condition} then
+	${2:if_body}
+else
+	${3:else_body}
+end if;
+endsnippet
+
+snippet ifeif "if-elsif statement" b
+if ${1:condition} then
+	${2:if_body}
+elsif ${3:condition} then
+	${4:elsif_body}
+end if;
+endsnippet
+
+snippet ifeife "if-elsif-else statement" b
+if ${1:condition} then
+	${2:if_body}
+elsif ${3:condition} then
+	${4:elsif_body}
+else
+	${5:else_body}
+end if;
 endsnippet
