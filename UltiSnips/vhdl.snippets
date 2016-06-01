@@ -151,6 +151,8 @@ endsnippet
 # ============================
 # Flow control structures
 # ============================
+
+# If statement
 snippet if "if statement" b
 if ${1:condition} then
 	${2:if_body}
@@ -181,4 +183,26 @@ elsif ${3:condition} then
 else
 	${5:else_body}
 end if;
+endsnippet
+
+# Case statement
+snippet case "basic case statement" b
+case ${1:what} is
+	${2:case_body}
+end case;
+endsnippet
+
+# ============================
+# Useful combinations of other
+# ============================
+
+snippet seq "sequential block, active-high reset" b
+${1:name}: process (${2:rst}, ${3:clk})
+begin
+	if $2 = '1' then
+		${4:reset_action}
+	elsif rising_edge($3) then
+		${5:rising_edge_action}
+	end if;
+end process;
 endsnippet
