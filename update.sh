@@ -1,4 +1,4 @@
 #!/bin/bash
 
 echo "Pull all submodules"
-git pull && git submodule init && git submodule update && git submodule status
+git pull origin master && git submodule init && git submodule update && git submodule status

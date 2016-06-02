@@ -147,7 +147,11 @@ set foldcolumn=1
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Default font for GVim
-set guifont=Droid\ Sans\ Mono\ Slashed\ for\ Powerline\ 11
+if has("win32")
+	set guifont=Droid_Sans_Mono_Dotted_for_Powe:h11
+else
+	set guifont=Droid\ Sans\ Mono\ Dotted\ for\ Powerline\ 11
+endif
 
 " Enable syntax highlighting
 syntax enable 
@@ -603,10 +607,3 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
-
-" Powerline
-"python from powerline.vim import setup as powerline_setup
-"python powerline_setup()
-"python del powerline_setup
-"set laststatus=2
-"set t_Co=256
