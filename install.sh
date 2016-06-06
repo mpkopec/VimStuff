@@ -13,7 +13,7 @@ echo "Make the terminal colors look like in GVim,"
 echo "which means making it 256-colors."
 if [ "$TERM" == "xterm" ]; then
  	 read -r -d '' termVar << eos
-if [ "$TERM" == "xterm" ]; then
+if [ "\$TERM" == "xterm" ]; then
     # No it isn't, it's gnome-terminal
     export TERM=xterm-256color
 fi
