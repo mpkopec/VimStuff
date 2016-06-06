@@ -63,12 +63,10 @@ let g:mapleader = ","
 
 " Fast saving
 nmap <leader>s :w!<cr>
-
-" Fast saving
-nmap <leader>q :qa!<cr>
-
-" Fast saving
-nmap <leader>sq :wqall!<cr>
+nmap <leader>q :q!<cr>
+nmap <leader>sq :wq!<cr>
+nmap <leader>qq :qa!<cr>
+nmap <leader>sqq :wqall!<cr>
 
 " :W sudo saves the file 
 " (useful for handling the permission-denied error)
