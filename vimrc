@@ -603,10 +603,6 @@ autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
-" Move around omnicompletion like in vim
-:inoremap <expr> j pumvisible() ? '<C-n>' : 'j'
-:inoremap <expr> k pumvisible() ? '<C-p>' : 'k'
-
 " UltiSnips
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<tab>"
