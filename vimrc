@@ -63,6 +63,10 @@ let g:mapleader = ","
 
 " Fast saving
 nmap <leader>s :w!<cr>
+nmap <leader>q :q!<cr>
+nmap <leader>sq :wq!<cr>
+nmap <leader>qq :qa!<cr>
+nmap <leader>sqq :wqall!<cr>
 
 " :W sudo saves the file 
 " (useful for handling the permission-denied error)
@@ -406,7 +410,7 @@ map <leader>s? z=
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
 " Quickly open a buffer for scribble
-map <leader>q :e ~/buffer<cr>
+"map <leader>q :e ~/buffer<cr>
 
 " Quickly open a markdown buffer for scribble
 map <leader>x :e ~/buffer.md<cr>
@@ -599,6 +603,10 @@ autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
+" Move around omnicompletion like in vim
+:inoremap <expr> j pumvisible() ? '<C-n>' : 'j'
+:inoremap <expr> k pumvisible() ? '<C-p>' : 'k'
+
 " UltiSnips
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<tab>"
@@ -607,3 +615,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
+
+" fugitive
+nmap <leader>gs :Gstatus<cr>
+nmap <leader>gc :Gcommit<cr>
