@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if ! gvim --serverlist | grep GVIM; then
+	echo "No server started, starting new one"
+	gvim --servername GVIM
+	sleep 1
+fi
+
+gvim --servername GVIM --remote "$@"

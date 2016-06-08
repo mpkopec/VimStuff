@@ -500,6 +500,11 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 "autocmd vimenter * NERDTree
 "autocmd vimenter * wincmd l
 "autocmd BufNew * wincmd l
+                
+" Start NERDTree
+autocmd VimEnter * NERDTree
+" Jump to the main window.
+autocmd VimEnter * wincmd p
 let g:nerdtree_tabs_open_on_console_startup = 1
 
 autocmd WinEnter * call s:CloseIfOnlyNerdTreeLeft()
