@@ -31,8 +31,19 @@ snippet bvr "bit vector reserved" b
 bit [$1:$2] reserved;
 endsnippet
 
+snippet varts "variable declaration in which the type has the same name with a suffix" b
+${1:type}_t $1;
+endsnippet
+
 snippet typsp "typedef struct packed"
 typedef struct packed {
 	${2:fields}
-} ${1:struct_name_t};
+} ${1:struct_name}_t;
+endsnippet
+
+# Control structures
+snippet for "for loop" b
+for ($1) begin
+	${2:for_body}
+end
 endsnippet
