@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Pull all submodules"
-git pull origin master && git submodule init && git submodule update && git submodule status
+git pull github master && git submodule init && git submodule update && git submodule status
 
 echo "Create .vimrc symbolic link"
 ln -s ~/.vim/vimrc ~/.vimrc
