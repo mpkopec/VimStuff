@@ -616,3 +616,5 @@ let g:UltiSnipsEditSplit="vertical"
 " fugitive
 nmap <leader>gs :Gstatus<cr>
 nmap <leader>gc :Gcommit<cr>
+nmap <leader>gps :Gpush<cr>
+nmap <leader>gpl :Gpull<cr>

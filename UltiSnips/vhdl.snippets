@@ -44,7 +44,7 @@ endsnippet
 
 # TODO remove sapaces from the repeated name
 snippet mps "map port, same signal name" b
-${1:entity_io}       => $1,
+${1:entity_io}       => ${1/(\w+).*/$1/g},
 endsnippet
 
 # TODO remove sapaces from the repeated name
