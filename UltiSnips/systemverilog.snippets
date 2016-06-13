@@ -1,0 +1,15 @@
+# Control structures
+snippet for "for loop" 
+for ($1) begin
+	${2:for_body}
+end
+endsnippet
+
+snippet ife "if-else clause" b
+if (${1:condition}) begin
+	${2:if_body}
+end
+else begin
+	${3:else_body}
+end
+endsnippet

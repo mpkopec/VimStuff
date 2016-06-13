@@ -55,3 +55,6 @@
 [submodule "bundle/neco-syntax"]
 	path = bundle/neco-syntax
 	url = https://github.com/Shougo/neco-syntax.git
+[submodule "bundle/auto-pairs"]
+	path = bundle/auto-pairs
+	url = git://github.com/jiangmiao/auto-pairs.git
