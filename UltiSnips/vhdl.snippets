@@ -42,14 +42,20 @@ snippet mp "map port" b
 ${1:entity_io}       => ${2:outside_signal},
 endsnippet
 
-# TODO remove sapaces from the repeated name
-snippet mps "map port, same signal name" b
-${1:entity_io}       => $1,
+snippet mpo "map port to open" b
+${1:entity_io}       => open,
 endsnippet
 
-# TODO remove sapaces from the repeated name
+snippet mpon "map port to open, no semicolon" b
+${1:entity_io}       => open
+endsnippet
+
+snippet mps "map port, same signal name" b
+${1:entity_io}       => ${1/(\w+).*/$1/g},
+endsnippet
+
 snippet mpsn "map port, same signal name, no semicolon" b
-${1:entity_io}       => $1
+${1:entity_io}       => ${1/(\w+).*/$1/g}
 endsnippet
 
 snippet mpn "map port, no semicolon" b
