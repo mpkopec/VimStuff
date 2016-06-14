@@ -11,11 +11,11 @@ ${1:name}           : ${2:dir}    ${3:type}
 endsnippet
 
 snippet iov "I/O declaration for vector" b
-${1:name}           : ${2:dir}    ${3:type}_VECTOR (${4:n} downto 0);
+${1:name}           : ${2:dir}    ${3:type}_vector (${4:n} downto 0);
 endsnippet
 
 snippet iovn "I/O declaration for vector, no semicolon" b
-${1:name}           : ${2:dir}    ${3:type}_VECTOR (${4:n} downto 0)
+${1:name}           : ${2:dir}    ${3:type}_vector (${4:n} downto 0)
 endsnippet
 
 snippet sig "signal declaration" b
@@ -23,7 +23,15 @@ signal ${1:name}          : ${2:type};
 endsnippet
 
 snippet sigv "signal declaration for vector" b
-signal ${1:name}          : ${2:type}_VECTOR (${3:n} downto 0);
+signal ${1:name}          : ${2:type}_vector (${3:n} downto 0);
+endsnippet
+
+snippet siglo "std_logic declaration" b
+signal ${1:name}          : std_logic;
+endsnippet
+
+snippet siglov "std_logic vector declaration" b
+signal ${1:name}          : std_logic_vector (${2:n} downto 0);
 endsnippet
 
 snippet sigval "signal declaration with value" b
@@ -31,7 +39,7 @@ signal ${1:name}          : ${2:type} := ${3:value};
 endsnippet
 
 snippet sigvval "signal declaration for vector with value" b
-signal ${1:name}          : ${2:type}_VECTOR (${3:n} downto 0) := ${4:value};
+signal ${1:name}          : ${2:type}_vector (${3:n} downto 0) := ${4:value};
 endsnippet
 
 snippet gen "generic declaration" b
