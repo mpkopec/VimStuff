@@ -1,73 +1,83 @@
+global !p
+def const_width(text):
+	tlen = len(text)
+	word_width = int(snip.opt("g:constant_width_snippet_value", "20"))
+	if tlen <= word_width:
+		return " "*(word_width-tlen)
+	else:
+		return ""
+endglobal
+
 # ============================
 # I/O, signals, variables and
 # other one-liners.
 # ============================
 snippet io "I/O declaration" b
-${1:name}           : ${2:dir}    ${3:type};
+$1`!p snip.rv = const_width(t[1])` : ${2:dir}    ${3:type};
 endsnippet
 
 snippet ion "I/O declaration, no semicolon" b
-${1:name}           : ${2:dir}    ${3:type}
+$1`!p snip.rv = const_width(t[1])` : ${2:dir}    ${3:type}
 endsnippet
 
 snippet iov "I/O declaration for vector" b
-${1:name}           : ${2:dir}    ${3:type}_vector (${4:n} downto 0);
+$1`!p snip.rv = const_width(t[1])` : ${2:dir}    ${3:type}_vector (${4:n} downto 0);
 endsnippet
 
 snippet iovn "I/O declaration for vector, no semicolon" b
-${1:name}           : ${2:dir}    ${3:type}_vector (${4:n} downto 0)
+$1`!p snip.rv = const_width(t[1])` : ${2:dir}    ${3:type}_vector (${4:n} downto 0)
 endsnippet
 
 snippet sig "signal declaration" b
-signal ${1:name}          : ${2:type};
+signal $1`!p snip.rv = const_width(t[1])` : ${2:type};
 endsnippet
 
 snippet sigv "signal declaration for vector" b
-signal ${1:name}          : ${2:type}_vector (${3:n} downto 0);
+signal $1`!p snip.rv = const_width(t[1])` : ${2:type}_vector (${3:n} downto 0);
 endsnippet
 
 snippet siglo "std_logic declaration" b
-signal ${1:name}          : std_logic;
+signal $1`!p snip.rv = const_width(t[1])` : std_logic;
 endsnippet
 
 snippet siglov "std_logic vector declaration" b
-signal ${1:name}          : std_logic_vector (${2:n} downto 0);
+signal $1`!p snip.rv = const_width(t[1])` : std_logic_vector (${2:n} downto 0);
 endsnippet
 
 snippet sigval "signal declaration with value" b
-signal ${1:name}          : ${2:type} := ${3:value};
+signal $1`!p snip.rv = const_width(t[1])` : ${2:type} := ${3:value};
 endsnippet
 
 snippet sigvval "signal declaration for vector with value" b
-signal ${1:name}          : ${2:type}_vector (${3:n} downto 0) := ${4:value};
+signal $1`!p snip.rv = const_width(t[1])` : ${2:type}_vector (${3:n} downto 0) := ${4:value};
 endsnippet
 
 snippet gen "generic declaration" b
-${1:name}           : ${2:type} := '${3:value}';
+$1`!p snip.rv = const_width(t[1])` : ${2:type} := '${3:value}';
 endsnippet
 
 snippet mp "map port" b
-${1:entity_io}       => ${2:outside_signal},
+$1`!p snip.rv = const_width(t[1])` => ${2:outside_signal},
 endsnippet
 
 snippet mpo "map port to open" b
-${1:entity_io}       => open,
+$1`!p snip.rv = const_width(t[1])` => open,
 endsnippet
 
 snippet mpon "map port to open, no semicolon" b
-${1:entity_io}       => open
+$1`!p snip.rv = const_width(t[1])` => open
 endsnippet
 
 snippet mps "map port, same signal name" b
-${1:entity_io}       => ${1/(\w+).*/$1/g},
+$1`!p snip.rv = const_width(t[1])` => ${1/(\w+).*/$1/g},
 endsnippet
 
 snippet mpsn "map port, same signal name, no semicolon" b
-${1:entity_io}       => ${1/(\w+).*/$1/g}
+$1`!p snip.rv = const_width(t[1])` => ${1/(\w+).*/$1/g}
 endsnippet
 
 snippet mpn "map port, no semicolon" b
-${1:entity_io}       => ${2:outside_signal}
+$1`!p snip.rv = const_width(t[1])` => ${2:outside_signal}
 endsnippet
 
 snippet w "wait;"

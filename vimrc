@@ -613,6 +613,10 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
 
+" For some snippets, which attempt to maintain constant text width
+" this width need to be set
+let g:constant_width_snippet_value = 20
+
 " fugitive
 nmap <leader>gs :Gstatus<cr>
 nmap <leader>gc :Gcommit<cr>
