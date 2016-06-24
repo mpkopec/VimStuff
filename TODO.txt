@@ -1,0 +1,3 @@
+install script may fail when .vimrc exists
+it can append the if statement to .bashrc when it is there, when terminal is not restarted after install
+fonts installation still does not execute properly
