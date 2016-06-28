@@ -5,9 +5,9 @@
 " Version: 1.0
 
 " Only do this when not done yet for this buffer
-if exists("b:did_ftplugin")
-  finish
-endif
+"if exists("b:did_ftplugin")
+"  finish
+"endif
 
 
 au BufRead,BufNewFile *.v,*.vh,*.sv,*.svh		set filetype=verilog_systemverilog

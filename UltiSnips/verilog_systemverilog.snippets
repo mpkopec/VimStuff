@@ -4,7 +4,29 @@ snippet /* "multiline comment"
 endsnippet
 
 # Verilog snippets
+# One-liners
+snippet mp "map port" b
+.${1:component_net} (${2:outside_net}),
+endsnippet
 
+snippet mpn "map port no comma" b
+.${1:component_net} (${2:outside_net})
+endsnippet
+
+snippet mps "map port same names" b
+.${1:component_net} ($1),
+endsnippet
+
+snippet mpsn "map port same names no comma" b
+.${1:component_net} ($1)
+endsnippet
+
+# Multi-line snippets, e.g. control sequences
+snippet inst "instantiate component" b
+${1:type} ${2:inst_name}(
+	${3:connectivity}
+);
+endsnippet
 
 # SystemVerilog snippets
 snippet b "bit type var" b
