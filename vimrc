@@ -38,6 +38,10 @@ set history=500
 filetype plugin on
 filetype indent on
 
+" Sets showing last entered command characters in NORMAL mode in
+" bottom right corner
+set showcmd
+
 " Set to auto read when a file is changed from the outside
 set autoread
 
