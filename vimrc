@@ -146,6 +146,10 @@ else
 	set guifont=Droid\ Sans\ Mono\ Dotted\ for\ Powerline\ 11
 endif
 
+" Highlight current column and line
+:set cursorline
+:set cursorcolumn
+
 " Enable syntax highlighting
 syntax enable 
 
