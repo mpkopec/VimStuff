@@ -148,7 +148,6 @@ endif
 
 " Highlight current column and line
 :set cursorline
-:set cursorcolumn
 
 " Enable syntax highlighting
 syntax enable 
