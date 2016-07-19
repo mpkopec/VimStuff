@@ -38,6 +38,10 @@ set history=500
 filetype plugin on
 filetype indent on
 
+" Sets showing last entered command characters in NORMAL mode in
+" bottom right corner
+set showcmd
+
 " Set to auto read when a file is changed from the outside
 set autoread
 
@@ -141,6 +145,9 @@ if has("win32")
 else
 	set guifont=Droid\ Sans\ Mono\ Dotted\ for\ Powerline\ 10
 endif
+
+" Highlight current column and line
+:set cursorline
 
 " Enable syntax highlighting
 syntax enable 
@@ -612,6 +619,10 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
+
+" For some snippets, which attempt to maintain constant text width
+" this width need to be set
+let g:constant_width_snippet_value = 20
 
 " fugitive
 nmap <leader>gs :Gstatus<cr>
