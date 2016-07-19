@@ -137,9 +137,9 @@ set foldcolumn=1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Default font for GVim
 if has("win32")
-	set guifont=Droid_Sans_Mono_Dotted_for_Powe:h11
+	set guifont=Droid_Sans_Mono_Dotted_for_Powe:h10
 else
-	set guifont=Droid\ Sans\ Mono\ Dotted\ for\ Powerline\ 11
+	set guifont=Droid\ Sans\ Mono\ Dotted\ for\ Powerline\ 10
 endif
 
 " Enable syntax highlighting
