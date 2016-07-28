@@ -147,7 +147,7 @@ else
 endif
 
 " Highlight current column and line
-:set cursorline
+set cursorline
 
 " Enable syntax highlighting
 syntax enable 
