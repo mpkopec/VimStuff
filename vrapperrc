@@ -1,0 +1,80 @@
+set history=500
+set showcmd
+set autoread
+let mapleader = ","
+let g:mapleader = ","
+nmap <leader>s :w!<cr>
+nmap <leader>q :q!<cr>
+nmap <leader>sq :wq!<cr>
+nmap <leader>qq :qa!<cr>
+nmap <leader>sqq :wqall!<cr>
+command W w !sudo tee % > /dev/null
+set so=7
+let $LANG='en' 
+set langmenu=en
+set wildmenu
+set wildignore=*.o,*~,*.pyc
+set ruler
+set cmdheight=2
+set hid
+set backspace=eol,start,indent
+set whichwrap+=<,>,h,l
+set ignorecase
+set smartcase
+set hlsearch
+set incsearch 
+set lazyredraw 
+set magic
+set showmatch 
+set mat=2
+set noerrorbells
+set novisualbell
+set t_vb=
+set tm=500
+set foldcolumn=1
+set cursorline
+syntax enable 
+set number
+set relativenumber
+set background=dark
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_guide_size = 1
+let g:indent_guides_space_guides = 1
+let g:indent_guides_auto_colors = 0
+set encoding=utf8
+set ffs=unix,dos,mac
+set nobackup
+set nowb
+set noswapfile
+set noexpandtab
+set smarttab
+set shiftwidth=3
+set tabstop=3
+set sts=3
+set lbr
+set tw=500
+set ai "Auto indent
+set si "Smart indent
+set wrap "Wrap lines
+vnoremap <silent> * :call VisualSelection('f', '')<CR>
+vnoremap <silent> # :call VisualSelection('b', '')<CR>
+let g:lasttab = 1
+nmap <Leader>tl :exe "tabn ".g:lasttab<CR>
+set hidden
+nmap <leader>T :enew<cr>
+nmap <leader>l :bnext<CR>
+nmap <leader>h :bprevious<CR>
+nmap <leader>bq :bp <BAR> bd #<CR>
+nmap <leader>bl :ls<CR>
+set laststatus=2
+set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
+nmap <M-j> mz:m+<cr>`z
+nmap <M-k> mz:m-2<cr>`z
+vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
+vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
+vnoremap <silent> gv :call VisualSelection('gv', '')<CR>
+vnoremap <silent> <leader>r :call VisualSelection('replace', '')<CR>
+noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
+command! Bclose call <SID>BufcloseCloseIt()
+set wildmode=longest,list,full
+set wildmenu
