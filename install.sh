@@ -7,7 +7,7 @@ echo "Create .vimrc symbolic link"
 ln -s ~/.vim/vimrc ~/.vimrc
 
 echo "Install fonts for airline"
-`bash ~/.vim/vimrc/fonts/install.sh`
+bash ~/.vim/fonts/install.sh
 
 echo "Make the terminal colors look like in GVim,"
 echo "which means making it 256-colors."
