@@ -143,7 +143,7 @@ set foldcolumn=1
 if has("win32")
 	set guifont=Droid_Sans_Mono_Dotted_for_Powe:h10
 else
-	set guifont=Droid\ Sans\ Mono\ Dotted\ for\ Powerline\ 10
+	set guifont=Liberation\ Mono\ for\ Powerline\ Regular\ 10
 endif
 
 " Highlight current column and line
