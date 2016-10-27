@@ -26,7 +26,11 @@
 
 " Pathogen
 call pathogen#helptags()
-execute pathogen#infect()
+set nocompatible
+execute pathogen#infect()    
+
+filetype plugin indent on
+syntax on
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
