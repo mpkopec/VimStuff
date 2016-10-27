@@ -643,3 +643,7 @@ set shellslash
 " search in a singe file. This will confuse Latex-Suite. Set your grep
 " program to always generate a file-name.
 set grepprg=grep\ -nH\ $*
+
+" Set pdf as default output format
+let g:Tex_DefaultTargetFormat="pdf"
+let g:Tex_DefaultViewRule_pdf="SumatraPDF"
