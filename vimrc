@@ -647,3 +647,4 @@ set grepprg=grep\ -nH\ $*
 " Set pdf as default output format
 let g:Tex_DefaultTargetFormat="pdf"
 let g:Tex_DefaultViewRule_pdf="SumatraPDF"
+let g:Tex_ViewRule_pdf="SumatraPDF"
